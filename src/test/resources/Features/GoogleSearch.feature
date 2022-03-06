@@ -1,15 +1,17 @@
-Feature: feature to test google search functionality
+Feature: Adding ad to memo as a favourite
   Background:
-    Given go to main page
+    Given Go to main page
 
-  Scenario Outline: validate google search is working
+  Scenario: validate google search is working
 
-    Given user is on search page
-    When user enters a <text> in search box
-    And hits enter
-    Then user is navigated ti search results
+    Given Go to category
+    When click by jobs name
+#    When user enters a <text> in search box
+    And open details
+#    Then user is navigated ti search results
+    And add ad to favorite
+    Then check that ad added to favorite increase favorite count
 
-    Examples:
-      | text                    |
-      | Automation step by step |
-      | Selenium                |
+#    Examples:
+#      | text     |
+#      | Вакансии |
